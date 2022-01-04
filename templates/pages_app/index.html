@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+
+  {% include 'parts/index/home.html' %}
+  {% include 'parts/index/boxes.html' %}
+  {% include 'parts/index/categories.html' %}
+  {% include 'parts/index/products.html' %}
+{% endblock content %}

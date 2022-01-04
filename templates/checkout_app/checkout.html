@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/checkout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/checkout_responsive.css' %}">
+
+  {% include 'parts/checkout/home.html' %}
+  {% include 'parts/checkout/checkout.html' %}
+
+  <script src="{% static 'js/checkout.js' %}"></script>
+{% endblock content %}

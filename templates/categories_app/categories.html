@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/categories.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/categories_responsive.css' %}">
+  {% include 'parts/categories/home.html' %}
+  {% include 'parts/categories/categories.html' %}
+  <script type="text/javascript" src="{% static 'js/categories.js' %}"></script>
+{% endblock content %}

@@ -1,0 +1,44 @@
+{% load static %}
+
+<!-- Blog -->
+
+<div class="blog">
+  <div class="section_container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          {% for blo in blog %}
+          <div class="blog_bosts">
+            
+            <!-- Blog Post -->
+            <div class="blog_post">
+              <div class="blog_post_image"><img src="{{ blo.image.url }}" alt="https://unsplash.com/@saskiafairfull"></div>
+              <div class="blog_post_content">
+                <div class="blog_post_date"><a href="#">{{ blo.date | date:'D  m, Y' }}</a></div>
+                <div class="blog_post_title"><a href="#">{{ blo.title }}</a></div>
+                <div class="blog_post_info d-flex flex-row align-items-start justify-content-start">
+                  <div class="blog_post_author">By<a href="#"> {{ blo.auther }}</a></div>
+                  <div class="blog_post_category">
+                    <ul>
+                      <li>in <a href="#">{{ blo.group }}</a></li>
+                    </ul>
+                  </div>
+                  <div class="blog_post_comments"><a href="#">{{ blo.comment }} Comments</a></div>
+                </div>
+                <div class="blog_post_text">
+                  <p>{{ blo.content }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="row load_more_row">
+        <div class="col">
+          <div class="load_more_button trans_200 ml-auto mr-auto"><a href="#">load more</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

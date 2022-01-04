@@ -1,0 +1,23 @@
+{% load static %}
+
+<!-- Categories -->
+<div class="categories">
+  <div class="section_container">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <div class="categories_list_container">
+            <ul class="categories_list d-flex flex-row align-items-center justify-content-start">
+              {% for cat in catig %}
+                <li><a href="{% url 'categories' %}">{{ cat.title }}</a></li>
+              {% endfor %}
+              {% comment %} <li><a href="{% url 'categories' %}">new arrivals</a></li>
+              <li><a href ="{% url 'categories' %}">recommended</a></li>
+              <li><a href ="{% url 'categories' %}">best sellers</a></li> {% endcomment %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

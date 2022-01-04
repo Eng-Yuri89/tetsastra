@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/blog.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/blog_responsive.css' %}">
+
+  {% include 'parts/blog/home.html' %}
+  {% include 'parts/blog/blog.html' %}
+  
+  <script src="{% static 'js/blog.js' %}"></script>
+{% endblock content %}
